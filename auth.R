@@ -2,10 +2,10 @@
 source("setup.R")
 
 # API keys
-api_key <- "your_api_key"
-api_secret_key <- "your_api_secret_key"
-access_token <- "your_access_token"
-access_token_secret <- "your_access_token_secret"
+api_key <- Sys.getenv("API_KEY")
+api_secret_key <- Sys.getenv("API_SECRET_KEY")
+access_token <- Sys.getenv("ACCESS_TOKEN")
+access_token_secret <- Sys.getenv("ACCESS_TOKEN_SECRET")
 
 # Authenticate with X API
 token <- create_token(
