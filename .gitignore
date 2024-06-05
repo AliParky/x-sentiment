@@ -47,3 +47,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# R Environment Variables (used for storing authentication keys)
+.Renviron
