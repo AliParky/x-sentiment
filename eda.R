@@ -9,3 +9,6 @@ tweets <- collect_tweets("#rstats", 100)
 
 # View the structure of the tweets data
 str(tweets)
+
+# Summary of the tweets data
+summary(tweets)
