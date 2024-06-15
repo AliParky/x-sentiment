@@ -15,3 +15,6 @@ summary(tweets)
 
 # Count the number of words in each tweet
 tweets$word_count <- sapply(strsplit(tweets$text, " "), length)
+
+# Summary of word counts
+summary(tweets$word_count)
