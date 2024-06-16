@@ -5,7 +5,7 @@ source("setup.R")
 source("data_collection.R")
 
 # Collect tweets
-tweets <- collect_tweets("#rstats", 100)
+tweets <- collect_tweets("#trump", 100)
 
 # View the structure of the tweets data
 str(tweets)
