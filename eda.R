@@ -18,3 +18,6 @@ tweets$word_count <- sapply(strsplit(tweets$text, " "), length)
 
 # Summary of word counts
 summary(tweets$word_count)
+
+# Histogram of word counts
+hist(tweets$word_count, main = "Histogram of Word Counts", xlab = "Word Count")
