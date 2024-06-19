@@ -21,3 +21,6 @@ summary(tweets$word_count)
 
 # Histogram of word counts
 hist(tweets$word_count, main = "Histogram of Word Counts", xlab = "Word Count")
+
+# Most common words
+corpus <- Corpus(VectorSource(tweets$text))
