@@ -24,3 +24,5 @@ hist(tweets$word_count, main = "Histogram of Word Counts", xlab = "Word Count")
 
 # Most common words
 corpus <- Corpus(VectorSource(tweets$text))
+tdm <- TermDocumentMatrix(corpus)
+m <- as.matrix(tdm)
