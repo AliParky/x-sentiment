@@ -12,6 +12,4 @@ collect_tweets <- function(hashtag, n) {
 
     # Save the tweets to an RDS file
     saveRDS(tweets, file = "tweets.rds")
-
-    return(tweets)
 }
