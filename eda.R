@@ -4,8 +4,8 @@ source("setup.R")
 # Load data_collection.R to get collect_tweets function
 source("data_collection.R")
 
-# Collect tweets
-tweets <- collect_tweets("#trump", 100)
+# Read tweets from the tweets.rds file
+tweets <- readRDS("tweets.rds")
 
 # View the structure of the tweets data
 str(tweets)
