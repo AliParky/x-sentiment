@@ -1,9 +1,6 @@
 # Load setup.R to get necessary packages
 source("setup.R")
 
-# Load data_collection.R to get collect_tweets function
-source("data_collection.R")
-
 # Read tweets from the tweets.rds file
 tweets <- readRDS("tweets.rds")
 
