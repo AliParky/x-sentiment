@@ -9,3 +9,6 @@ sentiment_scores <- perform_sentiment_analysis(tweets)
 
 # View the first few sentiment analysis results
 head(sentiment_scores)
+
+# Summary of sentiment scores
+summary(sentiment_scores$sentiment)
