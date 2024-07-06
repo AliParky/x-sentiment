@@ -12,3 +12,7 @@ head(sentiment_scores)
 
 # Summary of sentiment scores
 summary(sentiment_scores$sentiment)
+
+# Plotting sentiment scores
+ggplot(sentiment_scores, aes(x = sentiment))
+    + geom_histogram(binwidth = 0.1)
