@@ -15,4 +15,4 @@ summary(sentiment_scores$sentiment)
 
 # Plotting sentiment scores
 ggplot(sentiment_scores, aes(x = sentiment))
-    + geom_histogram(binwidth = 0.1)
+    geom_histogram(binwidth = 0.1, fill = "blue", color = "black")
