@@ -11,8 +11,9 @@ collect_tweets <- function(hashtag, n) {
     )
 
     # Save the tweets to an RDS file
-    saveRDS(tweets, file = "tweets.rds")
+    saveRDS(tweets, file = paste0("tweets_", Sys.Date(), ".rds"))
 }
 
 # Collect tweets with the hashtag #trump
 collect_tweets("#trump", 1000)
+
