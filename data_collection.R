@@ -3,6 +3,9 @@ source("setup.R")
 
 # Function to collect tweets from Twitter API
 collect_tweets <- function(hashtag, n) {
+    # Start of the collection process
+    log_info("Starting tweet collection for hashtag: {hashtag}")
+
     # Use search_tweets from the rtweet package to collect tweets
     tweets <- rtweet::search_tweets(
         q = hashtag,
@@ -12,6 +15,9 @@ collect_tweets <- function(hashtag, n) {
 
     # Save the tweets to an RDS file
     saveRDS(tweets, file = paste0("tweets_", Sys.Date(), ".rds"))
+
+    # End of the collection process
+    log_info("Tweet collection for hashtag: {hashtag} completed. File saved.")
 }
 
 # Collect tweets with the hashtag #trump
