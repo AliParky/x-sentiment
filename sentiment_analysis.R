@@ -15,4 +15,6 @@ summary(sentiment_scores$sentiment)
 
 # Plotting sentiment scores
 ggplot(sentiment_scores, aes(x = sentiment)) +
-    geom_histogram(binwidth = 0.1, fill = "blue", color = "black")
+    geom_histogram(binwidth = 0.1, fill = "blue", color = "black") +
+    theme_minimal() +
+    labs(title = "Distribution of Sentiment Scores", x = "Sentiment Score", y = "Frequency")
