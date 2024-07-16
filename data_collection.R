@@ -1,6 +1,10 @@
 # Load setup.R to get necessary packages
 source("setup.R")
 
+# Initialize logger
+log_appender(appender_file("data_collection.log"))
+log_threshold(DEBUG)
+
 # Function to collect tweets from Twitter API
 collect_tweets <- function(hashtag, n) {
     # Start of the collection process
@@ -22,4 +26,3 @@ collect_tweets <- function(hashtag, n) {
 
 # Collect tweets with the hashtag #trump
 collect_tweets("#trump", 1000)
-
