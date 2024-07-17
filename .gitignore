@@ -50,3 +50,6 @@ rsconnect/
 
 # R Environment Variables (used for storing authentication keys)
 .Renviron
+
+# Log files
+*.log
