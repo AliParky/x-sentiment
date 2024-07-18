@@ -6,13 +6,15 @@ log_appender(appender_file("data_collection.log"))
 log_threshold(DEBUG)
 
 # Function to collect tweets from Twitter API
-collect_tweets <- function(hashtag, n) {
+collect_tweets <- function(hashtag, n, since_date, until_date) {
     # Start of the collection process
     log_info("Starting tweet collection for hashtag: {hashtag}")
 
     # Use search_tweets from the rtweet package to collect tweets
     tweets <- rtweet::search_tweets(
         q = hashtag,
+        since = since_date,
+        until = until_date,
         n = n,
         include_rts = FALSE
     )
@@ -25,4 +27,4 @@ collect_tweets <- function(hashtag, n) {
 }
 
 # Collect tweets with the hashtag #trump
-collect_tweets("#trump", 1000)
+collect_tweets("#trump", 1000, "2016-01-01", "2025-01-01")
