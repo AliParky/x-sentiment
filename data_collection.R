@@ -2,7 +2,7 @@
 source("setup.R")
 
 # Initialize logger
-log_appender(appender_file("data_collection.log"))
+log_appender(appender_file("log.txt"))
 log_threshold(DEBUG)
 
 # Function to collect tweets from Twitter API
