@@ -8,7 +8,8 @@ log_threshold(DEBUG)
 # Function to collect tweets from Twitter API
 collect_tweets <- function(hashtag, n, since_date, until_date) {
     # Start of the collection process
-    log_info("Starting tweet collection for hashtag: {hashtag}")
+    log_info(paste0("Starting tweet collection for hashtag: ", hashtag, 
+                    ". Targeting ", n, " tweets from ", since_date, " to ", until_date, "."))
 
     # Use search_tweets from the rtweet package to collect tweets
     tweets <- rtweet::search_tweets(
@@ -23,7 +24,8 @@ collect_tweets <- function(hashtag, n, since_date, until_date) {
     saveRDS(tweets, file = paste0("tweets_", Sys.Date(), ".rds"))
 
     # End of the collection process
-    log_info("Tweet collection for hashtag: {hashtag} completed. File saved.")
+    log_info(paste0("Tweet collection for hashtag: ", hashtag, " completed. ",
+                    length(tweets$status_id), " tweets collected and saved."))
 }
 
 # Collect tweets with the hashtag #trump
