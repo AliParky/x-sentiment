@@ -1,10 +1,6 @@
 # Load setup.R to get necessary packages
 source("setup.R")
 
-# Initialize logger
-log_appender(appender_file("log.txt"))
-log_threshold(DEBUG)
-
 # Function to collect tweets from Twitter API
 collect_tweets <- function(hashtag, n, since_date, until_date) {
     # Start of the collection process
