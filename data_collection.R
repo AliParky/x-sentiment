@@ -12,17 +12,26 @@ collect_tweets <- function(hashtag, n, since_date, until_date) {
     log_info(paste0("Starting tweet collection for hashtag: ", hashtag, 
                     ". Targeting ", n, " tweets from ", since_date, " to ", until_date, "."))
 
-    # Use search_tweets from the rtweet package to collect tweets
-    tweets <- rtweet::search_tweets(
-        q = hashtag,
-        since = since_date,
-        until = until_date,
-        n = n,
-        include_rts = FALSE
-    )
+    all_tweets <- list()
+    
+    for (day in 0:(total_days - 1)) {
+        current_start <- start_date + days(day)
+        current_end <- start_date + days(day + 1)
+                
+        tweets <- rtweet::search_tweets(
+            q = hashtag,
+            since = as.character(current_start),
+            until = as.character(current_end),
+            n = tweets_per_day,
+            include_rts = FALSE
+        )
+        
+        all_tweets <- c(all_tweets, list(tweets))
+    }
 
     # Save the tweets to an RDS file
-    saveRDS(tweets, file = paste0("tweets_", Sys.Date(), ".rds"))
+    all_tweets_df <- do.call(rbind, all_tweets)    
+    saveRDS(all_tweets_df, file = paste0("tweets_", Sys.Date(), ".rds"))
 
     # End of the collection process
     log_info(paste0("Tweet collection for hashtag: ", hashtag, " completed. ",
