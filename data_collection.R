@@ -27,6 +27,8 @@ collect_tweets <- function(hashtag, n, since_date, until_date) {
         )
         
         all_tweets <- c(all_tweets, list(tweets))
+
+        Sys.sleep(1)
     }
 
     # Save the tweets to an RDS file
