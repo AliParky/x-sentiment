@@ -13,6 +13,9 @@ head(sentiment_scores)
 # Summary of sentiment scores
 summary(sentiment_scores$sentiment)
 
+# Merge sentiment scores with tweets to get dates
+tweets_with_sentiment <- merge(tweets, sentiment_scores, by = "status_id")
+
 # Plotting sentiment scores
 ggplot(sentiment_scores, aes(x = sentiment)) +
     geom_histogram(binwidth = 0.1, fill = "blue", color = "black") +
