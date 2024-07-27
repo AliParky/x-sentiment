@@ -17,6 +17,8 @@ collect_tweets <- function(hashtag, n, since_date, until_date) {
     for (day in 0:(total_days - 1)) {
         current_start <- start_date + days(day)
         current_end <- start_date + days(day + 1)
+
+        log_info(paste0("Collecting tweets for ", current_start, " to ", current_end))
                 
         tweets <- rtweet::search_tweets(
             q = hashtag,
