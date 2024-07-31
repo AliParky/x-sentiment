@@ -27,4 +27,5 @@ tweets_with_sentiment$date <- as.Date(tweets_with_sentiment$created_at)
 daily_sentiment <- aggregate(sentiment ~ date, data = tweets_with_sentiment, mean)
 
 # Plot sentiment scores vs. date
-ggplot(daily_sentiment, aes(x = date, y = sentiment))
+ggplot(daily_sentiment, aes(x = date, y = sentiment)) +
+    geom_line()
