@@ -37,6 +37,8 @@ tweets_with_sentiment$week <- floor_date(tweets_with_sentiment$date, "week")
 weekly_sentiment <- aggregate(sentiment ~ week, data = tweets_with_sentiment, mean)
 
 # Plot weekly sentiment scores
-ggplot(weekly_sentiment, aes(x = week, y = sentiment))
+ggplot(weekly_sentiment, aes(x = week, y = sentiment)) +
+    geom_line() +
+    labs(title = "Weekly Sentiment Score vs. Week", x = "Week", y = "Sentiment Score")
 
 tweets_with_sentiment$month <- floor_date(tweets_with_sentiment$date, "month")
