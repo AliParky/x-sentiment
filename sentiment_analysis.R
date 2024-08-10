@@ -40,6 +40,7 @@ weekly_sentiment <- aggregate(sentiment ~ week, data = tweets_with_sentiment, me
 # Plot weekly sentiment scores
 ggplot(weekly_sentiment, aes(x = week, y = sentiment)) +
     geom_line() +
+    theme_minimal() +
     labs(title = "Weekly Sentiment Score vs. Week", x = "Week", y = "Sentiment Score")
 
 # Aggregate sentiment scores by month
