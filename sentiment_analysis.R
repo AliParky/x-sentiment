@@ -30,7 +30,7 @@ daily_sentiment <- aggregate(sentiment ~ date, data = tweets_with_sentiment, mea
 ggplot(daily_sentiment, aes(x = date, y = sentiment)) +
     geom_line() +
     theme_minimal() +
-    labs(title = "Weekly Sentiment Score vs. Date", x = "Week", y = "Sentiment Score")
+    labs(title = "Weekly Sentiment Score vs. Date", x = "Day", y = "Sentiment Score")
 
 # Aggregate sentiment scores by week
 tweets_with_sentiment$date <- as.Date(tweets_with_sentiment$created_at)
