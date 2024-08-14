@@ -19,17 +19,18 @@ collect_tweets <- function(hashtag, n, since_date, until_date) {
         current_end <- start_date + days(day + 1)
 
         log_info(paste0("Collecting tweets for ", current_start, " to ", current_end))
-                
-        tweets <- rtweet::search_tweets(
-            q = hashtag,
-            since = as.character(current_start),
-            until = as.character(current_end),
-            n = tweets_per_day,
-            include_rts = FALSE
-        )
-        
-        all_tweets <- c(all_tweets, list(tweets))
 
+        tryCatch({
+            tweets <- rtweet::search_tweets(
+                q = hashtag,
+                since = as.character(current_start),
+                until = as.character(current_end),
+                n = tweets_per_day,
+                include_rts = FALSE
+            )
+            all_tweets <- c(all_tweets, list(tweets))
+        })
+        
         Sys.sleep(1)
     }
 
