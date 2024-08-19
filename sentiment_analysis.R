@@ -50,4 +50,5 @@ monthly_sentiment <- aggregate(sentiment ~ month, data = tweets_with_sentiment, 
 # Plot monthly sentiment scores
 ggplot(weekly_sentiment, aes(x = month, y = sentiment)) +
     geom_line() +
+    theme_minimal() +
     labs(title = "Monthly Sentiment Score vs. Month", x = "Month", y = "Sentiment Score")
