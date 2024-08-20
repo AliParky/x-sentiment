@@ -19,3 +19,11 @@ API_SECRET_KEY="your_api_secret_key_here"
 ACCESS_TOKEN="your_access_token_here"
 ACCESS_TOKEN_SECRET="your_access_token_secret_here"
 ```
+
+## Project Files
+
+- `auth.R`
+- `data_collection.R`
+- `eda.R`
+- `sentiment_analysis.R`
+- `setup.R`
