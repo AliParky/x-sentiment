@@ -52,3 +52,9 @@ ggplot(weekly_sentiment, aes(x = month, y = sentiment)) +
     geom_line() +
     theme_minimal() +
     labs(title = "Monthly Sentiment Score vs. Month", x = "Month", y = "Sentiment Score")
+
+# Save sentiment analysis results
+saveRDS(sentiment_scores, "sentiment_scores.rds")
+saveRDS(daily_sentiment, "daily_sentiment.rds")
+saveRDS(weekly_sentiment, "weekly_sentiment.rds")
+saveRDS(monthly_sentiment, "monthly_sentiment.rds")
