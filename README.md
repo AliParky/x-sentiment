@@ -22,8 +22,8 @@ ACCESS_TOKEN_SECRET="your_access_token_secret_here"
 
 ## Project Files
 
-- `auth.R`
-- `data_collection.R`
-- `eda.R`
-- `sentiment_analysis.R`
-- `setup.R`
+- `auth.R`: Handles authentication with the X API.
+- `data_collection.R`: Collects tweets from the X API.
+- `eda.R`: Performs exploratory data analysis on the collected tweets.
+- `sentiment_analysis.R`: Analyzes the sentiment of the collected tweets.
+- `setup.R`: Sets up the environment and dependencies for the project.
