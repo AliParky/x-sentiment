@@ -29,6 +29,8 @@ collect_tweets <- function(hashtag, n, since_date, until_date) {
                 include_rts = FALSE
             )
             all_tweets <- c(all_tweets, list(tweets))
+        }, error = function(e) {
+            log_error(paste0("Error collecting tweets for ", current_start, " to ", current_end, ": ", e$message))
         })
         
         Sys.sleep(1)
