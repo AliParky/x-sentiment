@@ -1,3 +1,13 @@
+# Install necessary packages
+install.packages("rtweet")
+install.packages("tidyverse")
+install.packages("tidytext")
+install.packages("tm")
+install.packages("sentimentr")
+install.packages("ggplot2")
+install.packages("logger")
+install.packages("lubridate")
+
 # Load necessary packages
 library("rtweet")
 library("tidyverse")
