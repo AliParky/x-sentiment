@@ -19,6 +19,7 @@ API_SECRET_KEY="your_api_secret_key_here"
 ACCESS_TOKEN="your_access_token_here"
 ACCESS_TOKEN_SECRET="your_access_token_secret_here"
 ```
+4. Run `data_collection.R` to collect tweets from the X API.
 
 ## Project Files
 
