@@ -1,12 +1,12 @@
-# Install necessary packages
-install.packages("rtweet")
-install.packages("tidyverse")
-install.packages("tidytext")
-install.packages("tm")
-install.packages("sentimentr")
-install.packages("ggplot2")
-install.packages("logger")
-install.packages("lubridate")
+# Install necessary packages if not already installed
+if (!requireNamespace("rtweet", quietly = TRUE)) install.packages("rtweet")
+if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
+if (!requireNamespace("tidytext", quietly = TRUE)) install.packages("tidytext")
+if (!requireNamespace("tm", quietly = TRUE)) install.packages("tm")
+if (!requireNamespace("sentimentr", quietly = TRUE)) install.packages("sentimentr")
+if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+if (!requireNamespace("logger", quietly = TRUE)) install.packages("logger")
+if (!requireNamespace("lubridate", quietly = TRUE)) install.packages("lubridate")
 
 # Load necessary packages
 library("rtweet")
