@@ -20,6 +20,7 @@ ACCESS_TOKEN="your_access_token_here"
 ACCESS_TOKEN_SECRET="your_access_token_secret_here"
 ```
 4. Run `data_collection.R` to collect tweets from the X API.
+5. Run `sentiment_analysis.R` to analyze the sentiment of the collected tweets and generate visualizations
 
 ## Project Files
 
