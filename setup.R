@@ -1,13 +1,12 @@
-# Install necessary packages if not already installed
-if (!requireNamespace("rtweet", quietly = TRUE)) install.packages("rtweet")
-if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
-if (!requireNamespace("tidytext", quietly = TRUE)) install.packages("tidytext")
-if (!requireNamespace("tm", quietly = TRUE)) install.packages("tm")
-if (!requireNamespace("sentimentr", quietly = TRUE)) install.packages("sentimentr")
-if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
-if (!requireNamespace("logger", quietly = TRUE)) install.packages("logger")
-if (!requireNamespace("lubridate", quietly = TRUE)) install.packages("lubridate")
+# List of necessary packages
+required_packages <- c("rtweet", "tidyverse", "tidytext", "tm", "sentimentr", "ggplot2", "logger", "lubridate")
 
+# Install necessary packages if not already installed
+for (pkg in required_packages) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg)
+  }
+}
 # Load necessary packages
 library("rtweet")
 library("tidyverse")
